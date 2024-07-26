@@ -1,6 +1,11 @@
 import { appendFile } from "fs";
 
 import timeToString from "./timetostring";
+import config from "../../config.json";
+
+interface LevelNumber {
+    [key: string]: number;
+}
 
 class Logger {
     logFile: string;
@@ -16,10 +21,11 @@ class Logger {
         CYAN: "\x1b[36m",
         WHITE: "\x1b[37m",
     };
-    levelNumber = {
+    levelNumber: LevelNumber = {
         DEBUG: 1,
         WARNING: 2,
         INFO: 3,
+        ERROR: 4,
     };
 
     constructor(logFile: string) {
@@ -54,16 +60,16 @@ class Logger {
         }
     }
 
-    async info(content: string) {
-        await this.log("info", content, this.colorData.GREEN);
-    }
-
     async error(content: string) {
         await this.log("error", content, this.colorData.RED);
     }
 
+    async info(content: string) {
+        await this.log("info", content, this.colorData.GREEN);
+    }
+
     async warn(content: string) {
-        await this.log("warn", content, this.colorData.YELLOW);
+        await this.log("warning", content, this.colorData.YELLOW);
     }
 
     async debug(content: string) {

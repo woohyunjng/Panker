@@ -1,0 +1,6 @@
+{
+    "port": 3000,
+    "logFile": "panker.log",
+    "logLevel": "DEBUG",
+    "staticDir": "static"
+}

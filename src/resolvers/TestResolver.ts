@@ -5,7 +5,7 @@ import Test from "../types/Test";
 class TestResolver {
     @Query(() => String)
     hello() {
-        return "world";
+        return "world1";
     }
 }
 

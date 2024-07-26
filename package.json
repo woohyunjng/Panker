@@ -9,11 +9,13 @@
         "start": "nodemon --watch \"*.ts\" --exec \"ts-node\" ./src/index.ts"
     },
     "dependencies": {
+        "@prisma/client": "^5.17.0",
         "apollo-server-express": "^3.13.0",
         "express": "^4.19.2",
         "graphql": "^16.9.0",
         "graphql-scalars": "^1.23.0",
         "nodemon": "^3.1.4",
+        "prisma": "^5.17.0",
         "reflect-metadata": "^0.2.2",
         "ts-node": "^10.9.2",
         "type-graphql": "^2.0.0-rc.2",
