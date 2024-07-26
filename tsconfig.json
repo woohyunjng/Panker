@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "target": "ESNext",
+        "module": "commonjs",
+
+        "outDir": "./dist",
+        "rootDir": "./src",
+
+        "resolveJsonModule": true,
+        "strict": true,
+        "esModuleInterop": true,
+
+        "sourceMap": true,
+        "declaration": true,
+        "declarationDir": "./dist/types",
+
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true
+    },
+    "include": ["src/**/*"]
+}
