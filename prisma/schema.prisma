@@ -40,3 +40,16 @@ model Rate {
     problem   Problem  @relation(fields: [problemId], references: [id])
     problemId Int
 }
+
+model Solution {
+    id        Int      @id @default(autoincrement())
+    content   String
+    author    User     @relation(fields: [authorId], references: [id])
+    authorId  Int
+    problem   Problem  @relation(fields: [problemId], references: [id])
+    problemId Int
+    rate      Rate[]
+    created   DateTime @default(now())
+    createdby User     @relation(fields: [createdbyId], references: [id])
+    createdbyId Int
+}
